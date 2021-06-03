@@ -1,0 +1,3 @@
+<div class="tasks-grid">
+    <app-task *ngFor="let task of totalTasks" class="task-card" [taskInfo]="task" (changeInTasks)="changeInTasks($event)"></app-task>
+</div>

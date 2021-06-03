@@ -1,0 +1,11 @@
+.tasks-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+
+    .task-card{
+        margin: 10px;
+    }
+}

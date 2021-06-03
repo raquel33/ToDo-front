@@ -1,0 +1,50 @@
+<div class="new-task">
+    <h3>Create a new task</h3>
+    <form #newTaskForm="ngForm" style ="text-align: center;">
+        <mat-form-field class="form-element">
+            <input
+                matInput
+                placeholder="Name"
+                name="name"
+                [(ngModel)]="name"
+                required
+            />
+        </mat-form-field>
+        <mat-form-field class="form-element">
+            <textarea
+                matInput
+                placeholder="Description"
+                name="description"
+                [(ngModel)]="description"
+                required>
+            </textarea>
+        </mat-form-field>    
+        <div class="form-priority">
+            <div class="label">
+                <mat-label >Priority</mat-label>
+            </div>
+            <div class="radio-buttons">
+                <mat-radio-group color="primary" (change)="onChange($event)" [value]=priority>
+                    <mat-radio-button value="HIGH"><span class="red">High</span></mat-radio-button>
+                    <mat-radio-button value="MEDIUM"><span class="yellow">Medium</span></mat-radio-button>
+                    <mat-radio-button value="LOW"><span class="green">Low</span></mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <div class="btn">
+            <button
+                mat-raised-button
+                (click)="save(newTaskForm.form.value)"
+                [disabled]="newTaskForm.form.invalid || loading"
+                color="primary"
+            > Save
+                <mat-icon *ngIf="!loading">save</mat-icon>
+                <mat-icon *ngIf="loading">
+                    <mat-spinner color="primary" diameter="20">
+                    </mat-spinner>
+                </mat-icon>
+            </button>
+        </div>
+    </form>
+</div>
+

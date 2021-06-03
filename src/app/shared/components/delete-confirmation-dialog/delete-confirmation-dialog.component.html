@@ -1,0 +1,25 @@
+<div mat-dialog-content class="alert-dialog">
+    <mat-icon>delete_forever</mat-icon>
+    <mat-divider></mat-divider>
+    <div class="pt-1">
+      You are about to delete the task <strong>{{data.name}}</strong> please confirm first the operation
+    </div>
+</div>
+
+<div mat-dialog-actions class="dialog-btn">
+    <button 
+      mat-button 
+      (click)="onNoClick()"
+    >
+      No
+    </button>
+    <button 
+      color="warn" 
+      mat-button 
+      (click)="onYesClick()" 
+      cdkFocusInitial
+    >
+      Yes
+    </button>
+</div>
+  

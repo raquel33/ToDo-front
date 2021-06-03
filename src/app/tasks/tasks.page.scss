@@ -1,0 +1,12 @@
+.content-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    .col1{
+        width: 40%;
+        background-color: #EBF5FB;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+}

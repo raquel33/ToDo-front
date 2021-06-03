@@ -1,0 +1,29 @@
+.component-header{
+    display: flex;
+    justify-content: space-between;
+}
+.task-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:20px;
+
+    .form-element{
+        width: 100%;
+    }
+    .mat-radio-button ~ .mat-radio-button {
+        margin-left: 16px;
+    }
+    .form-priority{
+        display: block;
+        padding-top: 10px;
+        .label{
+            text-align: left;
+            padding-bottom: 10px;
+            mat-label{
+                color: gray;
+            }
+        }
+    }
+}

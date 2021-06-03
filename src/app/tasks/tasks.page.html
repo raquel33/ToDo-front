@@ -1,0 +1,24 @@
+<!--HEADER -->
+<mat-toolbar color="primary">
+    <div class="header">
+        <mat-icon class="logo">assignment</mat-icon>
+        <span>TO DO LIST</span>
+    </div>
+</mat-toolbar>
+
+<!--CONTENT -->
+<div class="content-wrapper">
+    <!--NEW TASK SIDE FORM-->
+    <app-new-task 
+        (newTaskCreated)="getAllTasks()" 
+        class="col1"
+    ></app-new-task>
+
+    <!--TASKS GRID OVERALL VIEW -->
+    <app-tasks-grid 
+        [totalTasks]= "totalTasks" 
+        (tasksChanged)="getAllTasks()" 
+        style="width: 80%;">
+    </app-tasks-grid>
+</div>
+

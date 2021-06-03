@@ -1,0 +1,37 @@
+<mat-card >
+    <mat-card-title>
+        <div class="card-title-wrapper">
+            <div 
+                [ngClass]="{
+                    'red':taskInfo.priority === 'HIGH',
+                    'yellow':taskInfo.priority === 'MEDIUM',
+                    'green':taskInfo.priority === 'LOW'
+                }"
+            >
+                <mat-label>{{taskInfo.name}}</mat-label>
+            </div>
+           <button 
+                mat-icon-button
+                color="secondary"
+                matTooltip="Remove task"
+                matTooltipClass="tooltip"
+                (click)="editTask(taskInfo)"
+            >
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button 
+                mat-icon-button
+                color="secondary"
+                matTooltip="Remove task"
+                matTooltipClass="tooltip"
+                (click)="deteleTask(taskInfo)"
+            >
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </mat-card-title>
+    <hr />
+    <mat-card-content>
+        <mat-label>{{taskInfo.description}}</mat-label>
+    </mat-card-content>
+</mat-card>

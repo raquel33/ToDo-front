@@ -1,0 +1,24 @@
+.new-task{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .form-element{
+        width: 80%;
+    }
+    .mat-radio-button ~ .mat-radio-button {
+        margin-left: 16px;
+    }
+    .form-priority{
+        display: block;
+        padding-top: 10px;
+        .label{
+            text-align: left;
+            padding-left: 2rem;
+            padding-bottom: 10px;
+            mat-label{
+                color: gray;
+            }
+        }
+    }
+}
